@@ -3,7 +3,7 @@
 const TodoInput = document.querySelector('.todo-input')
 const TodoBtn = document.querySelector('.todo-btn')
 const TodoResult = document.querySelector('.todo-result')
-
+const TodoIcons = document.querySelector('.todo-icons')
 
 function addTodo(e){
     e.preventDefault();
@@ -17,9 +17,16 @@ function addTodo(e){
     todoTitle.classList.add('d-inline-block')
     todoTitle.classList.add('me-5')
 
+    const TodoIcons = document.createElement('button')
+    TodoIcons.button = TodoIcons.value
+    TodoIcons.classList.add('d-inline-block')
+    TodoIcons.classList.add('float-end')
+
+
     todoLi.appendChild(todoTitle)
     TodoResult.appendChild(todoLi)
-
+    TodoIcons.appendChild(todoLi)
+   
 }
 
 
